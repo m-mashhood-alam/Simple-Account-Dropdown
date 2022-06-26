@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dropdown Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="action__ddl">
+        <div class="account__menu" onclick="menuToggle();">
+            <img src="profile-pic.jpg" />
+        </div>
+        <div class="action__ddl__menu card-effect3D">
+            <div class="profile__picture card-effect3D mt-2 mb-2">
+                <img src="profile-pic.jpg" alt="">
+
+            </div>
+            <div class="div__usernames">
+                <p class="name" title="John Doe">John Doe</p>
+                <p class="email" title="johnDoe@sampledomain.com">johnDoe@sampledomain.com</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-user-circle"></i>Account
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-cog"></i>Settings
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa fa-envelope"></i>Inbox
+                    </a>
+                </li>
+
+            </ul>
+
+            <div style="text-align:center">
+                <a href="javascript:void(0)" class="btn__logout mt-2">Sign Out</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            let divToHide = document.querySelector(".action__ddl__menu");
+            document.onclick = function (e) {
+                if (e.target.closest(".action__ddl")) {
+                    //do nothing
+                }
+                else {
+                    //element clicked wasn't the div; hide the div
+                    divToHide.classList.remove("show");
+                }
+            }
+        };
+
+
+        function menuToggle() {
+            let toggleMenu = document.querySelector(".action__ddl__menu");
+            toggleMenu.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
