@@ -1,4 +1,4 @@
-# Simple and Beatuiful Account Dropdown
+# Simple and Beautiful account/profile Dropdown
 
 Basic CCS and HTML used to create a simple account dropdown menu.
 ENJOY!
